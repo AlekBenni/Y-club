@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route} from 'react-router-dom'
+import Footer from './components/footer/Footer';
+import Main from './components/pages/main/Main'
+import RouteComponent from './components/RouteComponent';
+import {useEffect} from 'react'
+import {useDispatch} from 'react-redux'
+import { getYachtsTC } from './actions/yachts';
+import { getArticleTC } from './actions/article';
+import { getCommentsTC } from './actions/comments';
+import { getReviewsTC } from './actions/reviews';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const dispatch = useDispatch()
+
+    useEffect(() => {
+      dispatch(getYachtsTC())
+      dispatch(getArticleTC())
+      dispatch(getCommentsTC())
+      dispatch(getReviewsTC())
+    })
+
+    return (
+      <div className="">
+          <BrowserRouter>
+              <div>
+                  <Route exact path="/" render = {() => <Main/>} />
+                  <RouteComponent/>
+              </div>
+              <Footer/>
+          </BrowserRouter>
+      </div>
+    );
 }
 
 export default App;

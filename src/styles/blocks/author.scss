@@ -1,0 +1,134 @@
+.main-author{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.main-author__wrapper{
+    flex-basis: 30%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    transition-duration: 0.5s;
+    transition-property: box-shadow;
+
+    h4{
+        font-family:  'Architects Daughter', cursive;
+        color: $red;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    >p{
+        font-style: italic;
+        font-size: 14px;
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            background-color: #1E1E1E;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &:hover{
+        box-shadow: 0px 0px 36px 9px rgba(34, 60, 80, 0.2);
+        .main-author__img{
+            transform: scale(1.1);
+        }
+    }
+}
+
+.main-author__social{
+    p{
+        font-family:  'Architects Daughter', cursive;
+        margin: 20px 0 10px 0;
+        font-weight: 600;
+    }
+    i{
+        margin: 0 10px;
+        font-size: 20px;
+        color: $red;
+        box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+        border-radius: 50%;
+        padding: 5px;
+        transition-duration: 0.3s;
+        transition-property: transform;
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+}
+
+.main-author__img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(34, 60, 80, 0.2);
+    border: 1px solid gray;
+    margin: 0 auto;
+    background-size: cover;
+    transition-duration: 0.5s;
+    transition-property: transform;
+    margin: 20px auto;
+}
+
+.bruna{
+    background-image: url("../../images/bruna.jpg");
+}
+
+.greene{
+    background-image: url("../../images/greene.jpg");
+}
+
+.people{
+    background-image: url("../../images/people.jpg");
+}
+
+@media(max-width: 1000px){
+    .main-author__social{
+        i{
+            font-size: 14px;
+            margin: 0 5px;
+        }
+    }   
+}
+
+@media(max-width: 900px){
+    .main-author{
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .main-author__wrapper{
+        flex-basis: 40%;
+        margin: 0 20px 20px 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media(max-width: 650px){
+    .main-author{
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    .main-author__wrapper{
+        flex-basis: 100%;
+    }
+}
+
+@media(max-width: 300px){
+    .main-author{
+        padding: 0;
+    }
+    .main-author__img{
+        width: 150px;
+        height: 150px;
+    }  
+}

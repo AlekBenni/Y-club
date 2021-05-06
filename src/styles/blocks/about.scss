@@ -1,0 +1,94 @@
+.about{
+    padding: 0 10px;
+}
+
+.aboutUs-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    .aboutUs-map{
+        flex-basis: 50%;
+        iframe{
+            width: 100%;
+            height: 400px;
+        }
+    }
+    
+    .aboutUs-contact{
+        flex-basis: 50%;
+        padding-left: 30px;
+        box-sizing: border-box;
+        h2{
+            margin-top: 0;
+            font-family:  'Architects Daughter', cursive;
+            font-size: 25px;
+            line-height: 25px;
+            border-left: 5px solid red;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+        .aboutUs-contact__phone, .aboutUs-contact__email, .aboutUs-contact__address{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid gray;
+            h4{
+                margin-right: 10px;
+            }
+        }
+        .aboutUs-follow{
+            text-align: center;
+            h4{
+                text-transform: uppercase;
+            }
+        }
+        .aboutUs-follow__social{
+            display: flex;
+            justify-content: space-around;
+
+            i{
+                color: red;
+                font-size: 35px;
+                transition-duration: 0.5s;
+                transition-property: transform;
+                &:hover{
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}
+
+.aboutUs-footer{
+    width: 80%;
+    margin: 0 auto 50px;
+    p{
+        margin: 0;
+    }
+}
+
+@media(max-width: 800px){
+    .aboutUs-wrapper{
+        .aboutUs-map{
+            flex-basis: 100%;
+            margin-bottom: 25px;
+        }        
+        .aboutUs-contact{
+            flex-basis: 100%;
+            padding: 0 20px;
+            h2{
+                border-left: 0;
+                padding-left: 0;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media(max-width: 400px){
+    .aboutUs-wrapper{
+        margin-bottom: 30px;
+    }
+}

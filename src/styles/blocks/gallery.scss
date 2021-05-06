@@ -1,0 +1,125 @@
+
+
+.main-gallery__blocks{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 10px;
+}
+
+.main-gallery-element{
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.main-gallery__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        display: block;
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-property: opacity;
+        z-index: 1;
+    }
+
+    .main-gallery-element__content{
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        color: $white;
+        width: 70%;
+        text-align: center;
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-property: opacity;
+
+        h4{
+            font-family:  'Architects Daughter', cursive;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        >p{
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+
+    .main-gallery-element__author{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        p{
+            margin: 0;
+        }
+    }
+
+    .main-gallery-element__social-top{
+        margin-top: 10px;
+        i {
+            color: $red;
+            letter-spacing: 5px;
+        }
+    }
+    
+    .main-gallery-element__social-icons{
+        padding: 10px 0;
+        a{
+            text-decoration: none;
+            color: #F4F304;
+            margin: 0 5px;
+            font-size: 18px;
+            transition-duration: 0.3s;
+            transition-property: color;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+        .main-gallery-element__content{
+            opacity: 1;
+        }
+    }
+}
+
+@media(max-width: 400px){
+    .main-gallery__blocks{
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    }
+    
+    .main-gallery-element{
+        height: 250px;
+    }
+
+    .main-gallery-element__content{
+        h4{
+            font-size: 12px;
+            text-transform: lowercase;
+        }
+    }
+}

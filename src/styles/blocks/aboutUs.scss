@@ -1,0 +1,58 @@
+.main-about{
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 50px;
+    h1{
+        font-family:  'Architects Daughter', cursive;
+        color: $red;
+        text-transform: uppercase;
+        margin-top: 100px;
+    }
+    p:first-of-type{
+        font-weight: 600;
+        font-style: normal;
+        font-size: 16px;
+        max-width: 100%;
+    }
+    p{
+        font-style: italic;
+        font-size: 12px;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    .main-about__stars{
+        i{
+            font-size: 25px;
+            color: $red;
+            margin: 0 5px;
+        }
+    }
+    
+    .button{
+        padding: 40px 0;
+        a{
+            @include btn($color: $red);
+        }
+    }
+}
+
+@media(max-width: 750px){
+    .main-about{
+        h1{
+            font-size: 25px;
+            margin-top: 80px;
+        }
+    }
+}
+
+@media(max-width: 450px){
+    .main-about{
+        margin-bottom: 40px;
+        h1{
+            font-size: 20px;
+            margin-top: 40px;
+        }
+    }
+}
+

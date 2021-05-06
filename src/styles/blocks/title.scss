@@ -1,0 +1,42 @@
+.title-component__wrapper{
+    text-align: center;
+    h1{
+        color: $gray-dark;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family:  'Architects Daughter', cursive;
+        margin: 80px 0 30px 0;
+    }
+    p{
+        width: 800px;
+        margin: 30px auto 50px;
+    }
+}
+
+@media(max-width: 900px){
+    .title-component__wrapper{
+        p{
+            width: 500px;
+            margin: 15px auto 30px;
+        }
+        h1{
+            margin: 40px 0 15px 0;
+            font-size: 25px;
+        }
+    }
+}
+
+@media(max-width: 500px){
+    .title-component__wrapper{
+        p{
+            width: 90%;
+            padding: 0 10px;
+            margin: 10px auto 20px;
+            box-sizing: border-box;
+        }
+        h1{
+            margin: 20px 0 10px 0;
+            font-size: 20px;
+        }
+    }
+}

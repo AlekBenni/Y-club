@@ -1,0 +1,45 @@
+.comment-page__wrapper{
+    margin-bottom: 50px;
+    padding: 0 10px;
+    h2{
+        font-family:  'Architects Daughter', cursive;
+    }
+
+    .comment-page__element{
+        box-shadow: 0px 0px 8px 3px rgba(34, 60, 80, 0.2) inset;
+        padding: 10px 15px 10px 20px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        font-style: italic;
+        &::first-letter {
+            color: red;
+            font-family:  'Architects Daughter', cursive;
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+    }
+
+    .comment-page__textarea{
+        width: 100%;
+        height: 100px;
+        padding: 15px;
+        box-sizing: border-box;
+        outline: 0;
+        box-shadow: 0px 0px 10px 5px rgba(34, 60, 80, 0.2) inset;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .comment-page__button-wrapper{
+        text-align: right;
+        margin-top: 20px;
+    .comment-page__button{
+        @include btn;
+        border: none;
+    }        
+    }
+
+
+
+}

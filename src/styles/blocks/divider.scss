@@ -1,0 +1,28 @@
+
+.divider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider__circle{
+    width: 15px;
+    height: 15px;
+    background-color: $red;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.divider__left, .divider__right{
+    width: 100px;
+    height: 3px;
+    background-color: $red;
+}
+
+@media(max-width: 300px){
+    .divider__left, .divider__right{
+        width: 50px;
+        height: 3px;
+    }    
+}
+
