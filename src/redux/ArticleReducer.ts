@@ -1,4 +1,3 @@
-import { Date } from "mongoose"
 
 type InitStateType = {
     article: Array<ArticleType>
